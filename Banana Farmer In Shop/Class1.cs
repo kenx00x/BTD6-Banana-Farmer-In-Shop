@@ -51,7 +51,7 @@ namespace Banana_Farmer_In_Shop
             [HarmonyPostfix]
             public static void Postfix(ProfileModel __instance)
             {
-                List<string> unlockedTowers = __instance.unlockedTowers;
+                HashSet<string> unlockedTowers = __instance.unlockedTowers;
                 if (unlockedTowers.Contains("BananaFarmer"))
                 {
                     MelonLogger.Log("Banana Farmer already unlocked");
